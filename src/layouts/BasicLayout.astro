@@ -18,34 +18,34 @@ interface Props {
 const { title, description, page, slug, frontmatter } = Astro.props;
 const image =
   page === "travel"
-    ? `${Astro.url.origin}/globe_preview.webp"`
-    : `${Astro.url.origin}/og-image.png`;
+    ? `${Astro.url.origin}/preview.png"`
+    : `${Astro.url.origin}/preview.png`;
 
 const schema =
   page !== "blog"
     ? {
         "@context": "http://schema.org",
         "@type": "Person",
-        name: "Gianmarco",
+        name: "Keshav Ashiya",
         url: "https://gianmarco.xyz",
         sameAs: [
-          "https://www.linkedin.com/in/gianmarco-cavallo",
-          "https://github.com/Ladvace",
+          "https://www.linkedin.com/in/keshavashiya",
+          "https://github.com/keshavashiya",
         ],
         image: "https://gianmarco.xyz/og-image.png",
-        jobTitle: "Freelance Frontend Developer",
+        jobTitle: "Senior Software Engineer",
         worksFor: {
           "@type": "Organization",
           name: "Self-Employed",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Italy",
-            addressCountry: "IT",
+            addressLocality: "India",
+            addressCountry: "IN",
           },
         },
         nationality: {
           "@type": "Country",
-          name: "Italy",
+          name: "India",
         },
       }
     : {
@@ -60,16 +60,16 @@ const schema =
         image: "https://gianmarco.xyz/og-image.png", //TODO: dynamic
         author: {
           "@type": "Person",
-          name: "Gianmarco",
+          name: "Keshav Ashiya",
           url: "https://gianmarco.xyz",
           sameAs: [
-            "https://www.linkedin.com/in/gianmarco-cavallo",
-            "https://github.com/Ladvace",
+            "https://www.linkedin.com/in/keshavashiya",
+            "https://github.com/keshavashiya",
           ],
         },
         publisher: {
           "@type": "Organization",
-          name: "Gianmarco",
+          name: "Keshav Ashiya",
           logo: {
             "@type": "ImageObject",
             url: "https://gianmarco.xyz/og-image.png",
